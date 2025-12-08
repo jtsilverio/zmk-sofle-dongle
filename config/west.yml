@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: tokyo2006
+      url-base: https://github.com/tokyo2006
   projects:
     - name: zmk
       remote: zmkfirmware
