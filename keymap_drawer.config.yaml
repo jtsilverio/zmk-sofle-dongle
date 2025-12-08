@@ -1,6 +1,6 @@
 draw_config:
   n_columns: 1
-  draw_key_sides: true
+  draw_key_sides: false
   key_w: 60.0
   key_h: 56.0
   split_gap: 30.0
@@ -10,8 +10,8 @@ draw_config:
   key_ry: 6.0
   inner_pad_w: 2.0
   inner_pad_h: 2.0
-  outer_pad_w: 40.0
-  outer_pad_h: 56.0
+  # outer_pad_w: 40.0
+  # outer_pad_h: 56.0
   line_spacing: 1.2
   arc_radius: 6.0
   append_colon_to_layer_header: true
@@ -20,9 +20,9 @@ draw_config:
     /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
 
     svg.keymap {
-      font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
+      font-family: Inter, Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
       font-size: 12px;
-      font-weight: bold;
+      font-weight: normal;
       text-rendering: optimizeLegibility;
     }
 
@@ -204,10 +204,7 @@ parse_config:
       tap: $$mdi:apple-keyboard-shift$$
       hold: $$mdi:toggle-switch$$
 
-    # Empty
-    "&none":
-      tap: $$mdi:minus-circle-outline$$
-      type: none
+
 
     # Whitespace
     "&bkspc_del":
@@ -248,12 +245,12 @@ parse_config:
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
       hold: $$mdi:arrow-down-bold$$
-    # Reset
-    "&sys_reset":
-      type: bootloader
-      tap: $$mdi:backup-restore$$
-    "&bootloader":
-      tap: $$mdi:progress-download$$
+    # # Reset
+    # "&sys_reset":
+    #   type: bootloader
+    #   tap: $$mdi:backup-restore$$
+    # "&bootloader":
+    #   tap: $$mdi:progress-download$$
 
   # ZMK
   zmk_keycode_map:
@@ -318,8 +315,12 @@ parse_config:
     SQT:
       tap: "'"
       shifted: '"'
-    APOSTROPHE: <
-    APOS: .
+    APOSTROPHE: 
+      tap: "'"
+      shifted: '"'
+    APOS: 
+      tap: "'"
+      shifted: '"'
     DOUBLE_QUOTES: '"'
     DQT: '"'
 
@@ -391,28 +392,28 @@ parse_config:
       shifted: ")"
 
     # Modifiers
-    LCTRL: $$mdi:apple-keyboard-control$$
-    LEFT_CONTROL: $$mdi:apple-keyboard-control$$
-    LALT: $$mdi:apple-keyboard-option$$
-    LEFT_ALT: $$mdi:apple-keyboard-option$$
-    LSHIFT: $$mdi:apple-keyboard-shift$$
-    LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
-    LSHFT: $$mdi:apple-keyboard-shift$$
-    LCMD: $$mdi:apple-keyboard-command$$
-    LG: $$mdi:apple-keyboard-command$$
-    LEFT_GUI: $$mdi:apple-keyboard-command$$
-    LEFT_COMMAND: $$mdi:apple-keyboard-command$$
-    RCTRL: $$mdi:apple-keyboard-control$$
-    RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
-    RALT: $$mdi:apple-keyboard-option$$
-    RIGHT_ALT: $$mdi:apple-keyboard-option$$
-    RSHIFT: $$mdi:apple-keyboard-shift$$
-    RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
-    RSHFT: $$mdi:apple-keyboard-shift$$
-    RCMD: $$mdi:apple-keyboard-command$$
-    RG: $$mdi:apple-keyboard-command$$
-    PSCRN: $$mdi:printer-outline$$
-    RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
+    # LCTRL: $$mdi:apple-keyboard-control$$
+    # LEFT_CONTROL: $$mdi:apple-keyboard-control$$
+    # LALT: $$mdi:apple-keyboard-option$$
+    # LEFT_ALT: $$mdi:apple-keyboard-option$$
+    # LSHIFT: $$mdi:apple-keyboard-shift$$
+    # LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
+    # LSHFT: $$mdi:apple-keyboard-shift$$
+    # LCMD: $$mdi:apple-keyboard-command$$
+    # LG: $$mdi:apple-keyboard-command$$
+    # LEFT_GUI: $$mdi:apple-keyboard-command$$
+    # LEFT_COMMAND: $$mdi:apple-keyboard-command$$
+    # RCTRL: $$mdi:apple-keyboard-control$$
+    # RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
+    # RALT: $$mdi:apple-keyboard-option$$
+    # RIGHT_ALT: $$mdi:apple-keyboard-option$$
+    # RSHIFT: $$mdi:apple-keyboard-shift$$
+    # RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
+    # RSHFT: $$mdi:apple-keyboard-shift$$
+    # RCMD: $$mdi:apple-keyboard-command$$
+    # RG: $$mdi:apple-keyboard-command$$
+    # PSCRN: $$mdi:printer-outline$$
+    # RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
     PAGE_UP:
       tap: 'PgUp'
       shifted: ''
